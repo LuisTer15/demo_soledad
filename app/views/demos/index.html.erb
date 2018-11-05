@@ -1,1 +1,12 @@
-Hello
+<%= render 'partials/navbar' %>
+<div class="container-fluid">
+  <div class="row justify-content-center" id="home">
+    <div class="col-9 mt-5">
+      <h4>Selecciona el tipo de mensaje que deseas generar:</h4>
+      <br>
+      <%= link_to 'Generar Notificación', new_demo_path, class: "btn btn-secondary btn-lg btn-block" %>
+      <br>
+      <%= link_to 'Generar Alerta', new_demo_path, class: "btn btn-danger btn-lg btn-block" %>
+    </div>
+  </div>  
+</div>
