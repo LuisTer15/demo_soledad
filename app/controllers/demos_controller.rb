@@ -69,13 +69,7 @@ class DemosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_demo
-      @demo = Demo.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
     def demo_params
-      params.fetch(:demo, {})
+      params.require(:demo).permit(:description)
     end
 end
