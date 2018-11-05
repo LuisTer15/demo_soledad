@@ -11,7 +11,9 @@
     </div>
   <% end %>
 
+  <textarea class="form-control m-1 bg-light" rows="8" placeholder="Escribe tu mensaje..."></textarea>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Enviar Notificación', class: "btn btn-primary mt-1 mb-3" %>
   </div>
 <% end %>

@@ -7,6 +7,15 @@ class DemosController < ApplicationController
     @demos = Demo.all
   end
 
+  def home
+  end
+
+  def login
+  end
+
+  def success
+  end
+
   # GET /demos/1
   # GET /demos/1.json
   def show
@@ -28,11 +37,9 @@ class DemosController < ApplicationController
 
     respond_to do |format|
       if @demo.save
-        format.html { redirect_to @demo, notice: 'Demo was successfully created.' }
-        format.json { render :show, status: :created, location: @demo }
+        format.html { redirect_to success_path }
       else
         format.html { render :new }
-        format.json { render json: @demo.errors, status: :unprocessable_entity }
       end
     end
   end
